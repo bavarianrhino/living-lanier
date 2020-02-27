@@ -9,6 +9,7 @@ import * as actions from './actions'
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from './pages/Home'
+import Search from './pages/Search'
 // import Dashboard from './Dashboard'
 
 class App extends Component {
@@ -23,11 +24,12 @@ class App extends Component {
                 <BrowserRouter>
                     <div style={{backgroundColor: '#fb6f6f'}} className="cover">
                         <Header />
+                        <Route exact path='/search' component={Search} />
                         <Route exact path='/' component={Home} />
-                        {/* <Route exact path='/login' component={Login} /> */}
                         {/* <Route exact path='/thankyou' component={Thankyou} /> */}
                         {/* <Route exact path='/surveys' component={Dashboard} /> */}
                         {/* <Route path='/surveys/new' component={SurveyNew} /> */}
+                        <Footer />
                     </div>
                 </BrowserRouter>
             </div>

@@ -9,6 +9,7 @@ import './stylesheets/index.css';
 import 'semantic-ui-css/semantic.min.css'
 
 import App from './App';
+import { RootReducer } from './reducers/RootReducer';
 import * as serviceWorker from './serviceWorker';
 
 import axios from 'axios';
