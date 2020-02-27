@@ -1,6 +1,6 @@
 import React from 'react';
-import livinglaniersunset from './images/livinglaniersunset.jpg';
-import './App.css';
+import livinglaniersunset from './media/livinglaniersunset.jpg';
+import './stylesheets/App.css';
 
 function App() {
     return (        	
