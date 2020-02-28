@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import './stylesheets/App.css';
 import LivingLanierSunset from './media/livinglaniersunset.jpg';
 
-import * as actions from './actions'
+import { fetchHomes } from './actions';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from './pages/Home'
@@ -16,6 +16,8 @@ class App extends Component {
 
     componentDidMount() {
         document.title = 'Living Lanier | Buy Sell and Search Homes on Lake Lanier';
+
+        this.props.fetchHomes();
     }
 
     render() {
@@ -37,7 +39,11 @@ class App extends Component {
     };
 };
 
-export default connect(null, actions)(App);
+function mapStateToProps(state) {
+    return { homes: state.homes }
+}
+
+export default connect(mapStateToProps, { fetchHomes })(App);
 
 // function App() {
 //     return (        	
