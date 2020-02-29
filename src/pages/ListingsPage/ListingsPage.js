@@ -26,7 +26,7 @@ const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
 
-export default function LandingPage(props) {
+export default function ListingsPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
   return (
@@ -34,7 +34,7 @@ export default function LandingPage(props) {
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="Lanier Life Group"
+        brand="Material Kit React"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -69,7 +69,7 @@ export default function LandingPage(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <ProductSection />
-          {/* <TeamSection /> */}
+          <TeamSection />
           <WorkSection />
         </div>
       </div>

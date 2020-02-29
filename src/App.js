@@ -6,11 +6,11 @@ import './stylesheets/App.css';
 import LivingLanierSunset from './assets/livinglaniersunset.jpg';
 
 import { fetchHomes } from './actions';
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Home from './pages/Home'
+// import Header from "./components/Header";
+// import Footer from "./components/Footer";
+// import Home from './pages/Home'
 import Landing from './pages/LandingPage/LandingPage'
-import Search from './pages/Search'
+import Listings from './pages/ListingsPage/ListingsPage'
 // import Dashboard from './Dashboard'
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
     componentDidMount() {
         document.title = 'Living Lanier | Buy Sell and Search Homes on Lake Lanier';
 
-        this.props.fetchHomes();
+        // this.props.fetchHomes();
     }
 
     render() {
@@ -26,14 +26,12 @@ class App extends Component {
             <div>
                 <BrowserRouter>
                     <div style={{backgroundColor: '#fb6f6f'}} className="cover">
-                        <Header />
-                        <Route exact path='/landing' component={Landing} />
-                        <Route exact path='/search' component={Search} />
-                        <Route exact path='/' component={Home} />
+                        {/* <Route exact path='/landing' component={Landing} /> */}
+                        <Route exact path='/listings' component={Listings} />
+                        <Route exact path='/' component={Landing} />
                         {/* <Route exact path='/thankyou' component={Thankyou} /> */}
                         {/* <Route exact path='/surveys' component={Dashboard} /> */}
                         {/* <Route path='/surveys/new' component={SurveyNew} /> */}
-                        <Footer />
                     </div>
                 </BrowserRouter>
             </div>
