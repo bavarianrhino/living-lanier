@@ -3,12 +3,13 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import './stylesheets/App.css';
-import LivingLanierSunset from './media/livinglaniersunset.jpg';
+import LivingLanierSunset from './assets/livinglaniersunset.jpg';
 
 import { fetchHomes } from './actions';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from './pages/Home'
+import Landing from './pages/LandingPage/LandingPage'
 import Search from './pages/Search'
 // import Dashboard from './Dashboard'
 
@@ -26,6 +27,7 @@ class App extends Component {
                 <BrowserRouter>
                     <div style={{backgroundColor: '#fb6f6f'}} className="cover">
                         <Header />
+                        <Route exact path='/landing' component={Landing} />
                         <Route exact path='/search' component={Search} />
                         <Route exact path='/' component={Home} />
                         {/* <Route exact path='/thankyou' component={Thankyou} /> */}

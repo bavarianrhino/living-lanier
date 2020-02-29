@@ -22,7 +22,7 @@ class Header extends Component {
 					<Container>
                         <Link to='/' style={{ display: 'flex' }}>
                             <Menu.Item as='' header>
-                                <Image size='tiny' src={require(`../media/livinglaniersunset.jpg`)} style={{ marginRight: '1.5em' }} />
+                                <Image size='tiny' src={require(`../assets/livinglaniersunset.jpg`)} style={{ marginRight: '1.5em' }} />
                                 Lanier Life Group
                             </Menu.Item>
                         </Link>
