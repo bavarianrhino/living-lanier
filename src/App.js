@@ -7,6 +7,9 @@ import "assets/scss/material-kit-react.scss?v=1.8.0";
 
 import { fetchHomes } from './actions';
 
+import AboutUs from './pages/AboutUsPage/AboutUsPage'
+import Contact from './pages/ContactPage/ContactPage'
+import Legal from './pages/LegalPage/LegalPage'
 import Landing from './pages/LandingPage/LandingPage'
 import Listings from './pages/ListingsPage/ListingsPage'
 
