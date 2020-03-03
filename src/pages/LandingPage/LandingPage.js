@@ -69,3 +69,27 @@ export default function LandingPage(props) {
         </div>
     );
 }
+// import React, { Component } from 'react';
+// import { connect } from 'react-redux';
+// import { Link } from 'react-router-dom';
+// import { Container, Header, Image } from 'semantic-ui-react';
+// class Search extends Component {
+// 	render() {
+// 		return (
+//             <div>
+//                 <Container text style={{ marginTop: '7em' }}>
+//                     <Header as='h1'>Semantic UI React Fixed Template</Header>
+//                     <p>This is a basic fixed menu template using fixed size containers.</p>
+//                 </Container>
+//             </div>
+//         );
+//     }
+// }
+
+// const mapStateToProps = (state) => {
+//     return { attr: state.attr }
+// }
+// const mapDispatchToProps = (dispatch) => ({
+//     functionName: (param) => dispatch({ type: 'ACTION_NAME', param })
+// })
+// export default connect(mapStateToProps, mapDispatchToProps)(Search);
