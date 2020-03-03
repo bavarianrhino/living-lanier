@@ -27,53 +27,45 @@ const dashboardRoutes = [];
 const useStyles = makeStyles(styles);
 
 export default function LandingPage(props) {
-  const classes = useStyles();
-  const { ...rest } = props;
-  return (
-    <div>
-      <Header
-        color="transparent"
-        routes={dashboardRoutes}
-        brand="Lanier Life Group"
-        rightLinks={<HeaderLinks />}
-        fixed
-        changeColorOnScroll={{
-          height: 400,
-          color: "white"
-        }}
-        {...rest}
-      />
-      <Parallax filter image={require("assets/livinglaniersunset.jpg")}>
-        <div className={classes.container}>
-          <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Find Your Home On Lake Lanier!</h1>
-              <h4>
-                Put small description here.
-              </h4>
-              <br />
-              <Button
-                color="warning"
-                size="lg"
-                href="https://www.livinglanier/listings"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fas fa-play" />
-                See Listings
-              </Button>
-            </GridItem>
-          </GridContainer>
+
+    const classes = useStyles();
+    const { ...rest } = props;
+
+    return (
+        <div>
+            <Header
+                color="transparent"
+                routes={dashboardRoutes}
+                brand="Lanier Life Group"
+                rightLinks={<HeaderLinks />}
+                fixed
+                changeColorOnScroll={{ height: 400, color: "white" }}
+                {...rest}
+            />
+
+            <Parallax filter image={require("assets/livinglaniersunset.jpg")}>
+                <div className={classes.container}>
+                    <GridContainer>
+                        <GridItem xs={12} sm={12} md={6} lg={8}>
+                            <h1 className={classes.title}>Find Your Home On Lake Lanier!</h1>
+                            <h4>Put small description here.</h4>
+                            <br />
+                            <Button color="warning" size="lg" href="https://www.livinglanier/listings" target="_blank" rel="noopener noreferrer" >See Listings -<i className="fas fa-angle-right" /></Button>
+                        </GridItem>
+                    </GridContainer>
+                </div>
+            </Parallax>
+
+            <div className={classNames(classes.main, classes.mainRaised)}>
+                <div className={classes.container}>
+                    <ProductSection />
+                    {/* <TeamSection /> */}
+                    <WorkSection />
+                </div>
+            </div>
+
+            <Footer />
+
         </div>
-      </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
-          <ProductSection />
-          {/* <TeamSection /> */}
-          <WorkSection />
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
+    );
 }
