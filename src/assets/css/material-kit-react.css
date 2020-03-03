@@ -331,7 +331,7 @@ dl {
   transform-origin: 50% 50%; }
 
 #cd-vertical-nav a span {
-  float: right;
+  float: none;
   display: inline-block;
   -webkit-transform: scale(0.6);
   -moz-transform: scale(0.6);
@@ -520,6 +520,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -moz-transition: 300ms ease 0s;
   -ms-transition: 300ms ease 0s;
   -o-transform: 300ms ease 0s;
+  transform: 300ms ease 0s;
   transition: 300ms ease 0s; }
   .noUi-handle:focus {
     outline: none; }
@@ -1058,7 +1059,7 @@ td.rdtYear:hover {
 .image-gallery-right-nav::before {
   display: inline-block;
   font-family: "Ionicons";
-  speak: none;
+  /* speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1407,6 +1408,7 @@ td.rdtYear:hover {
     word-wrap: normal;
     direction: ltr;
     -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
     -webkit-font-smoothing: antialiased; }
 
 .image-gallery-left-nav {
