@@ -3,17 +3,12 @@ import { Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 import { connect } from 'react-redux';
 
-// import './stylesheets/App.css';
 import "assets/scss/material-kit-react.scss?v=1.8.0";
-import LivingLanierSunset from './assets/livinglaniersunset.jpg';
 
 import { fetchHomes } from './actions';
-// import Header from "./components/Header";
-// import Footer from "./components/Footer";
-// import Home from './pages/Home'
+
 import Landing from './pages/LandingPage/LandingPage'
 import Listings from './pages/ListingsPage/ListingsPage'
-// import Dashboard from './Dashboard'
 
 var hist = createBrowserHistory();
 
@@ -30,8 +25,10 @@ class App extends Component {
             <div>
                 <Router history={hist}>
                     <Switch>
+                        <Route exact path='/about' component={AboutUs} />
+                        <Route exact path='/contact' component={Contact} />
+                        <Route exact path='/legal' component={Legal} />
                         <Route exact path='/listings' component={Listings} />
-                        {/* <Route exact path='/contact' component={Contact} /> */}
                         <Route exact path='/' component={Landing} />
                     </Switch>
                 </Router>
