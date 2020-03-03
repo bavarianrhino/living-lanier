@@ -10,20 +10,20 @@
 
  * Coded by Creative Tim
 
- =========================================================
 
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
- */
+*/
+// Core Components
 @import "core/variables";
 @import "core/mixins";
 
-// Core Components
-@import "core/misc";
-
 // Core Plugins
+@import "core/misc";
 
 // @import "plugins/plugin-datetime-picker";
 @import "plugins/plugin-nouislider";
 @import "plugins/plugin-react-datetime";
+@import "plugins/plugin-react-image-gallery";
 @import "plugins/plugin-react-slick";
+@import "plugins/plugin-react-tagsinput";
