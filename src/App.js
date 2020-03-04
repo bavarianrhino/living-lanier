@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import "assets/scss/material-kit-react.scss?v=1.8.0";
 
-import { fetchHomes } from './actions';
+import { fetchResidences } from './actions';
 
 import AboutUs from './pages/AboutUsPage/AboutUsPage'
 import Contact from './pages/ContactPage/ContactPage'
@@ -19,7 +19,8 @@ class App extends Component {
 
     componentDidMount() {
         document.title = 'Living Lanier | Buy Sell and Search Homes on Lake Lanier';
-        // this.props.fetchHomes();
+        this.props.fetchResidences();
+        // this.props.fetchProperties();
     }
 
     render() {
@@ -40,7 +41,7 @@ class App extends Component {
 };
 
 function mapStateToProps(state) {
-    return { homes: state.homes }
+    return { residences: state.residences }
 }
 
-export default connect(mapStateToProps, { fetchHomes })(App);
+export default connect(mapStateToProps, { fetchResidences })(App);

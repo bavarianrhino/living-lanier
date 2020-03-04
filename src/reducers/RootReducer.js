@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import homeSearchReducer from './homeSearchReducer';
-import lotSearchReducer from './lotSearchReducer';
+import residencesSearchReducer from './residencesSearchReducer';
+import propertiesSearchReducer from './propertiesSearchReducer';
 
 export const RootReducer = combineReducers({
-    homes: homeSearchReducer,
-    lots: lotSearchReducer
+    residences: residencesSearchReducer,
+    properties: propertiesSearchReducer
 });
