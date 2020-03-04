@@ -331,7 +331,7 @@ dl {
   transform-origin: 50% 50%; }
 
 #cd-vertical-nav a span {
-  float: none;
+  float: right;
   display: inline-block;
   -webkit-transform: scale(0.6);
   -moz-transform: scale(0.6);

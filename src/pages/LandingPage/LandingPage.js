@@ -1,10 +1,14 @@
 import React from "react";
-// nodejs library that concatenates classes
-import classNames from "classnames";
+import { Link } from 'react-router-dom';
+import classNames from "classnames"; // nodejs library that concatenates classes
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 
 // @material-ui/icons
+import Favorite from "@material-ui/icons/Favorite";
 
 // core components
 import Header from "../../components/Header/Header.js";
@@ -15,18 +19,23 @@ import Button from "../../components/CustomButtons/Button.js";
 import HeaderLinks from "../../components/Header/HeaderLinks.js";
 import Parallax from "../../components/Parallax/Parallax.js";
 
-import styles from "assets/jss/material-kit-react/views/landingPage.js";
+import landingPageStyle from "../../assets/jss/material-kit-react/views/landingPageStyle.js";
+// import logoPic from "../../assets/logo.png";
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection.js";
-import TeamSection from "./Sections/TeamSection.js";
-import WorkSection from "./Sections/WorkSection.js";
+import SectionSimilarStories from "./Sections/SectionSimilarStories.js";
+// import dark from "@material-ui/core/styles/createPalette";
 
 const dashboardRoutes = [];
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles(landingPageStyle);
 
 export default function LandingPage(props) {
+
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+    });
 
     const classes = useStyles();
     const { ...rest } = props;
@@ -35,22 +44,27 @@ export default function LandingPage(props) {
         <div>
             <Header
                 color="transparent"
-                routes={dashboardRoutes}
                 brand="Lanier Life Group"
-                rightLinks={<HeaderLinks />}
+                links={<HeaderLinks dropdownHoverColor="info" />}
                 fixed
                 changeColorOnScroll={{ height: 400, color: "white" }}
                 {...rest}
             />
 
-            <Parallax filter image={require("assets/livinglaniersunset.jpg")}>
+            <Parallax filter="dark" image={require("assets/livinglaniersunset.jpg")}>
                 <div className={classes.container}>
                     <GridContainer>
-                        <GridItem xs={12} sm={12} md={6} lg={8}>
-                            <h1 className={classes.title}>Find Your Home On Lake Lanier!</h1>
-                            <h4>Put small description here.</h4>
+                        <GridItem xs={12} sm={12} md={6} lg={6}>
+                            <h1 className={classes.title}>Water Front Homes on Lake Lanier.</h1>
+                            <h4>Are you looking for water front property but seem to always find homes that aren’t really on the lake?
+                                 With a life long knowledge of Lake Lanier, our passion is to provide you with nothing less than water 
+                                 in your backyard. Simple as that.</h4>
                             <br />
-                            <Button color="warning" size="lg" href="https://www.livinglanier/listings" target="_blank" rel="noopener noreferrer" >See Listings -<i className="fas fa-angle-right" /></Button>
+                            <Link to="/listings">
+                                <Button type='button' color="danger" size="lg" >
+                                    See Listings
+                                </Button>
+                            </Link>
                         </GridItem>
                     </GridContainer>
                 </div>
@@ -58,14 +72,33 @@ export default function LandingPage(props) {
 
             <div className={classNames(classes.main, classes.mainRaised)}>
                 <div className={classes.container}>
-                    <ProductSection />
-                    {/* <TeamSection /> */}
-                    <WorkSection />
+
+                    <SectionSimilarStories />
+                    
                 </div>
             </div>
 
-            <Footer />
+            <Footer content={
+                <div>
+                    <div className={classes.left}>
+                        <List className={classes.list}>
+                            <ListItem className={classes.inlineBlock}>
+                                <Link className={classes.block} to="/about" >About Us</Link>
+                            </ListItem>
+                            <ListItem className={classes.inlineBlock}>
+                                <Link className={classes.block} to="/contact" >Contact</Link>
+                            </ListItem>
+                            <ListItem className={classes.inlineBlock}>
+                                <Link className={classes.block} to="/legal" >Legal</Link>
+                            </ListItem>
+                        </List>
+                    </div>
 
+                    <div className={classes.right}>&copy; {1900 + new Date().getYear()}, made by{" "}
+                        <a href="https://www.ryanriesenberger.com/" className={classes.inlineBlock} target="_blank" > Ryan Riesenberger.</a>
+                    </div>
+                </div>
+            }/>
         </div>
     );
 }

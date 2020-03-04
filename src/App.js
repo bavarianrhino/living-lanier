@@ -19,7 +19,6 @@ class App extends Component {
 
     componentDidMount() {
         document.title = 'Living Lanier | Buy Sell and Search Homes on Lake Lanier';
-
         // this.props.fetchHomes();
     }
 

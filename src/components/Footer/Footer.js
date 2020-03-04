@@ -1,60 +1,52 @@
-/*eslint-disable*/
+/* eslint-disable */
 import React from "react";
 // nodejs library to set properties for components
-import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
 // nodejs library that concatenates classes
 import classNames from "classnames";
-// material-ui core components
-import { List, ListItem } from "@material-ui/core";
+// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
 import Favorite from "@material-ui/icons/Favorite";
 
-import styles from "assets/jss/material-kit-react/components/footerStyle.js";
+import styles from "../../assets/jss/material-kit-react/components/footerStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function Footer(props) {
+    const { children, content, theme, big, className } = props;
     const classes = useStyles();
-    const { whiteFont } = props;
+    const themeType =
+        theme === "transparent" || theme == undefined ? false : true;
     const footerClasses = classNames({
         [classes.footer]: true,
-        [classes.footerWhiteFont]: whiteFont
+        [classes[theme]]: themeType,
+        [classes.big]: big || children !== undefined,
+        [className]: className !== undefined
     });
     const aClasses = classNames({
-        [classes.a]: true,
-        [classes.footerWhiteFont]: whiteFont
+        [classes.a]: true
     });
 
     return (
         <footer className={footerClasses}>
             <div className={classes.container}>
-
-                <div className={classes.left}>
-                    <List className={classes.list}>
-                        <ListItem className={classes.inlineBlock}>
-                            <Link className={classes.block} to="/about" >About Us</Link>
-                        </ListItem>
-                        <ListItem className={classes.inlineBlock}>
-                            <Link className={classes.block} to="/contact" >Contact</Link>
-                        </ListItem>
-                        <ListItem className={classes.inlineBlock}>
-                            <Link className={classes.block} to="/legal" >Legal</Link>
-                        </ListItem>
-                    </List>
-                </div>
-
-                <div className={classes.right}>&copy; {1900 + new Date().getYear()}, made by{" "}
-                    <a href="https://www.ryanriesenberger.com/" className={aClasses} target="_blank" > Ryan Riesenberger.</a>
-                </div>
-
+                {children !== undefined ? (
+                    <div>
+                        <div className={classes.content}>{children}</div>
+                        <hr />
+                    </div>
+                ) : (" ")}{content}<div className={classes.clearFix}></div>
             </div>
         </footer>
     );
 }
 
 Footer.propTypes = {
-    whiteFont: PropTypes.bool
+    theme: PropTypes.oneOf(["dark", "white", "transparent"]),
+    big: PropTypes.bool,
+    content: PropTypes.node.isRequired
 };
+

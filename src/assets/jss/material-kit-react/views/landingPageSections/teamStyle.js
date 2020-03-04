@@ -1,5 +1,9 @@
-import { cardTitle, title } from "assets/jss/material-kit-react.js";
-import imagesStyle from "assets/jss/material-kit-react/imagesStyles.js";
+import {
+  cardTitle,
+  title,
+  grayColor
+} from "../../../material-kit-react.js";
+import imagesStyle from "../../imagesStyles.js";
 
 const teamStyle = {
   section: {
@@ -20,10 +24,10 @@ const teamStyle = {
   },
   cardTitle,
   smallTitle: {
-    color: "#6c757d"
+    color: grayColor[7]
   },
   description: {
-    color: "#999"
+    color: grayColor[0]
   },
   justifyCenter: {
     justifyContent: "center !important"
@@ -37,10 +41,13 @@ const teamStyle = {
     height: "100%",
     lineHeight: "41px",
     fontSize: "20px",
-    color: "#999"
+    color: grayColor[0]
   },
   margin5: {
     margin: "5px"
+  },
+  card3: {
+    textAlign: "center"
   }
 };
 

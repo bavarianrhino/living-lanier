@@ -16,9 +16,9 @@ import Icon from "@material-ui/core/Icon";
 import Popper from "@material-ui/core/Popper";
 
 // core components
-import Button from "components/CustomButtons/Button.js";
+import Button from "../CustomButtons/Button.js";
 
-import styles from "assets/jss/material-kit-react/components/customDropdownStyle.js";
+import styles from "../../assets/jss/material-kit-react/components/customDropdownStyle.js";
 
 const useStyles = makeStyles(styles);
 
@@ -74,7 +74,7 @@ export default function CustomDropdown(props) {
       icon = <props.buttonIcon className={classes.buttonIcon} />;
       break;
     case "string":
-      icon = <Icon className={classes.buttonIcon}>{props.buttonIcon}</Icon>;
+      icon = <Icon style={{ fontSize: 'large' }} className={classes.buttonIcon}>{props.buttonIcon}</Icon>;
       break;
     default:
       icon = null;
@@ -92,7 +92,7 @@ export default function CustomDropdown(props) {
         >
           {icon}
           {buttonText !== undefined ? buttonText : null}
-          {caret ? <b className={caretClasses} /> : null}
+          {/* {caret ? <b className={caretClasses} /> : null} */}
         </Button>
       </div>
       <Popper

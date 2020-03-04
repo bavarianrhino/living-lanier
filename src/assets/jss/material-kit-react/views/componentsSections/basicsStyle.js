@@ -1,11 +1,22 @@
-import { container, title } from "assets/jss/material-kit-react.js";
-import customCheckboxRadioSwitch from "assets/jss/material-kit-react/customCheckboxRadioSwitch.js";
+import {
+  container,
+  whiteColor,
+  title,
+  mlAuto,
+  mrAuto
+} from "../../../material-kit-react.js";
+import customCheckboxRadioSwitch from "../../customCheckboxRadioSwitchStyle.js";
+import customSelectStyle from "../../customSelectStyle.js";
 
 const basicsStyle = {
+  mlAuto,
+  mrAuto,
+  container,
+  ...customSelectStyle,
+  ...customCheckboxRadioSwitch,
   sections: {
     padding: "70px 0"
   },
-  container,
   title: {
     ...title,
     marginTop: "30px",
@@ -23,9 +34,8 @@ const basicsStyle = {
   icons: {
     width: "17px",
     height: "17px",
-    color: "#FFFFFF"
-  },
-  ...customCheckboxRadioSwitch
+    color: whiteColor
+  }
 };
 
 export default basicsStyle;
