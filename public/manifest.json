@@ -1,25 +1,26 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
+    "short_name": "Living Lanier",
+    "name": "Lanier Life Group - Living Lanier",
+    "description": "Easiest and fastest way to find any home being sold on Lake Lanier. All homes listed for sale contain some type of dock access on the property",
+    "icons": [
     {
-      "src": "favicon.ico",
+      "src": "media/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "media/livingLanierLogo192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "media/livingLanierLogo512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+    ],
+    "start_url": "./index.html",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
 }
