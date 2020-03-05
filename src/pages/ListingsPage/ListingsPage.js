@@ -23,7 +23,7 @@ import landingPageStyle from "../../assets/jss/material-kit-react/views/landingP
 // import logoPic from "../../assets/logo.png";
 
 // Sections for this page
-// import SectionSimilarStories from "./Sections/SectionSimilarStories.js";
+import MapContainer from "./Sections/MapContainer.js";
 // import dark from "@material-ui/core/styles/createPalette";
 
 const dashboardRoutes = [];
@@ -51,8 +51,8 @@ export default function ListingsPage(props) {
                 {...rest}
             />
 
-            <Parallax filter="dark" image={require("assets/livinglaniersunset.jpg")}>
-                <div className={classes.container}>
+            <Parallax filter="dark" image={require("assets/livinglaniersunset.jpg")} style={{ height: '20vh' }}>
+                <div className={classes.container} style={{ margin: '-80px 100px 0px 100px', maxWidth: '100% !important' }} >
                     <GridContainer>
                         {/* <GridItem xs={12} sm={12} md={6} lg={6}>
                             <h1 className={classes.title}>Water Front Homes on Lake Lanier.</h1>
@@ -71,9 +71,9 @@ export default function ListingsPage(props) {
             </Parallax>
 
             <div className={classNames(classes.main, classes.mainRaised)}>
-                <div className={classes.container}>
+                <div className={classes.container} style={{ paddingLeft: '0px', maxWidth: '100%' }} >
 
-                    {/* <SectionSimilarStories /> */}
+                    <MapContainer />
                     
                 </div>
             </div>

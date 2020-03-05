@@ -81,7 +81,7 @@ const contactsSection = {
   },
   card2: {
     "@media (min-width: 991px)": {
-      margin: "80px 0 80px 150px"
+      margin: "110px 0 80px 25px"
     },
     maxWidth: "560px",
     float: "left",

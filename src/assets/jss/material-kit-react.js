@@ -151,7 +151,7 @@ const transition = {
 
 const containerFluid = {
   paddingRight: "15px",
-  paddingLeft: "15px",
+  paddingLeft: "0px",
   marginRight: "auto",
   marginLeft: "auto",
   width: "100%"
@@ -171,6 +171,22 @@ const container = {
     maxWidth: "1140px"
   }
 };
+
+const containerMAP = {
+    ...containerFluid,
+    "@media (min-width: 576px)": {
+      maxWidth: "540px"
+    },
+    "@media (min-width: 768px)": {
+      maxWidth: "720px"
+    },
+    "@media (min-width: 992px)": {
+      maxWidth: "960px"
+    },
+    "@media (min-width: 1200px)": {
+      maxWidth: "100%"
+    }
+  };
 
 const card = {
   display: "inline-block",
@@ -438,6 +454,7 @@ export {
   drawerWidth,
   transition,
   container,
+  containerMAP,
   containerFluid,
   boxShadow,
   card,
