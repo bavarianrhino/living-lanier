@@ -3,10 +3,10 @@ import { FETCH_RESIDENCES } from '../actions/types';
 export default function (
     state = {
         loading: false,
-        last_residence_fetch_query: '',
-        next_residence_fetch_query: '',
-        residence_fetch_count: 0,
-        residence_listings: {},
+        lastQuery: '',
+        nextQuery: '',
+        residenceCount: 0,
+        residenceListingsByID: {},
 
     },action) {
     switch(action.type) {
@@ -28,10 +28,10 @@ export default function (
             console.log(listings)
             return { 
                 ...state,
-                last_residence_fetch_query: action.payload['@odata.context'],
-                next_residence_fetch_query: action.payload['@odata.nextLink'],
-                residence_fetch_count: action.payload['@odata.count'],
-                residence_listings: listings
+                lastQuery: action.payload['@odata.context'],
+                nextQuery: action.payload['@odata.nextLink'],
+                residenceCount: action.payload['@odata.count'],
+                residenceListingsByID: listings
             };
 
         default:
