@@ -24,5 +24,5 @@ ReactDOM.render(
 	document.getElementById('root')
 );
 
-console.log(`FMLS KEY IS: TESTAPI ----- ENVIRONMENT IS IN: ${process.env.NODE_ENV}`) //process.env.REACT_APP_KEY
+console.log(`ENVIRONMENT ---- ${process.env.NODE_ENV}`) //process.env.REACT_APP_KEY
 serviceWorker.unregister();

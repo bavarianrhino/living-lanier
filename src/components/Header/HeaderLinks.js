@@ -88,10 +88,10 @@ const smoothScroll = (e, target) => {
                     buttonProps={{ className: classes.navLink, color: "transparent", fontSize: "large" }}
                     buttonIcon={ViewCarousel}
                     dropdownList={[
-                        <Link to="/listings/residence" className={classes.dropdownLink}>
+                        <Link to="/listings" className={classes.dropdownLink}>
                             <House className={classes.dropdownIcons} /> Residence
                         </Link>,
-                        <Link to="/listings/property" className={classes.dropdownLink}>
+                        <Link to="/listings" className={classes.dropdownLink}>
                             <Landscape className={classes.dropdownIcons} /> Property
                         </Link>
                     ]}

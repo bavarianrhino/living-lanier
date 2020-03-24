@@ -43,15 +43,15 @@ export default function ListingsPage(props) {
     return (
         <div>
             <Header
-                color="transparent"
+                color="white"
                 brand="Lanier Life Group"
                 links={<HeaderLinks dropdownHoverColor="info" />}
-                fixed
-                changeColorOnScroll={{ height: 400, color: "white" }}
+                absolute
+                changeColorOnScroll={{ height: 10, color: "white" }}
                 {...rest}
             />
 
-            <Parallax filter="dark" image={require("assets/livinglaniersunset.jpg")} style={{ height: '20vh' }}>
+            <Parallax filter="dark" image={require("assets/livinglaniersunset.jpg")} style={{ height: '20vh' }} >
                 <div className={classes.container} style={{ margin: '-80px 100px 0px 100px', maxWidth: '100% !important' }} >
                     <GridContainer>
                         {/* <GridItem xs={12} sm={12} md={6} lg={6}>
