@@ -325,9 +325,7 @@ const useStyles = makeStyles(contactsStyle);
                                 </CardBody>
 
                                 <CardFooter className={classes.justifyContentBetween}>
-                                    <FormControlLabel control={
-                                        <Checkbox tabIndex={-1} onClick={() => handleToggle(2)} checkedIcon={<Check className={classes.checkedIcon} />} icon={<Check className={classes.uncheckedIcon} />} classes={{ checked: classes.checked, root: classes.checkRoot }} /> } classes={{ label: classes.label }} label="I'm not a robot" />
-                                        <Button color="danger" className={classes.pullRight}> See More! </Button>
+                                    <InfoArea className={classes.infoArea2} title="Organize data here!" description={ <span> Data goes here </span> } icon={PinDrop} iconColor="danger" />
                                 </CardFooter>
 
                             </form>
