@@ -24,3 +24,4 @@ yarn-error.log*
 
 # API Keys
 /src/utilities/config/dev.js
+/src/utilities/dev.js
