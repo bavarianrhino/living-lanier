@@ -13,6 +13,7 @@
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -23,5 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # API Keys
+/src/utilities/config/create-env.js
 /src/utilities/config/dev.js
 /src/utilities/dev.js
