@@ -14,11 +14,14 @@ export default function (
         case FETCH_PROPERTIES:
             const lots = action.payload.value.map((obj, i) => ({ [obj.ListingId]: Object.assign({}, {
                     cardData: {
+                        price: obj.FMLS_currentPrice,
+                        listPrice: obj.ListPrice,
                         coords: [obj.Longitude, obj.Latitude],
                         daysOnMarket: obj.DaysOnMarket, 
                         propertyType: obj.PropertyType,
                         bioText: obj.PublicRemarks,
-                        media: obj.media,
+                        photoCount: obj.PhotosCount,
+                        media: obj.Media,
                         mediaURL: obj.VirtualTourURLUnbranded
                     }
                 }, {
