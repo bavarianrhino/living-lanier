@@ -6,13 +6,15 @@ export default function (
         lastQuery: '',
         nextQuery: '',
         residenceCount: 0,
-        residenceListingsByID: {},
+        topThreeLatest: {},
+        residenceListingsByID: {}
 
     },action) {
     switch(action.type) {
 
         case FETCH_RESIDENCES:
             const listings = action.payload.value.map((obj, i) => ({ [obj.ListingId]: Object.assign({}, {
+                    listingId: obj.ListingId,
                     cardData: {
                         price: obj.FMLS_CurrentPrice,
                         listPrice: obj.ListPrice,
@@ -34,6 +36,7 @@ export default function (
                 lastQuery: action.payload['@odata.context'],
                 nextQuery: action.payload['@odata.nextLink'],
                 residenceCount: action.payload['@odata.count'],
+                topThreeLatest: [listings[0], listings[1], listings[2]],
                 residenceListingsByID: listings
             };
 

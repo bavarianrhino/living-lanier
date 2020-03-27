@@ -1,5 +1,6 @@
 import React from "react";
-import { connect} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+// import { addCount } from "./store/counter/actions";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
@@ -22,15 +23,12 @@ import sectionSimilarStoriesStyle from "../../../assets/jss/material-kit-react/v
 
 const useStyles = makeStyles(sectionSimilarStoriesStyle);
 
-const SectionSimilarStoryCard = (props) => {
+export default function SectionSimilarStoryCard (props) {
  
     const classes = useStyles()
-
-    // mapThreeRecentProps = (state) => {
-        // top3Residences
-    // }
-    console.log(props.top3Residences)
-    console.log(top3Residences)
+    // const top3Residences = useSelector(state => state.residences.residenceListingsById.slice(0,3));
+    // const dispatch = useDispatch();
+    // console.log(top3Residences)
 
     return (
         <Card blog>
@@ -49,16 +47,8 @@ const SectionSimilarStoryCard = (props) => {
 
     )
 }
-    
-    const mapStateToProps = (state) => {
-        return { 
-            top3Residences: state.residences.residenceListingsById
-        }
-        // return { top3Residences: state.residences.residenceListingsById.slice(0,3)}
-    }
-    
-    const mapDispatchToProps = (dispatch) => ({
-        functionName: (param) => dispatch({ type: 'ACTION_NAME', param })
-    })
-    
-    export default connect(mapStateToProps, mapDispatchToProps)(SectionSimilarStoryCard);
+// import { addCount } from "./store/counter/actions";
+//     const mapDispatchToProps = (dispatch) => ({
+//         functionName: (param) => dispatch({ type: 'ACTION_NAME', param })
+//     })
+//     <button onClick={() => dispatch(addCount())}>Add to count</button>

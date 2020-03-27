@@ -1,5 +1,5 @@
 import React from "react";
-import { connect} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
@@ -22,8 +22,13 @@ import sectionSimilarStoriesStyle from "../../../assets/jss/material-kit-react/v
 const useStyles = makeStyles(sectionSimilarStoriesStyle);
 
 // class SectionSimilarStories extends React.Component {
-const SectionSimilarStories = (props) => {
+export default function SectionSimilarStories(props){
     const classes = useStyles();
+    const topThreeListed = useSelector(state => {state.residences.residenceListingsByID[0]})
+    // const topThreeListed = useSelector(state => {state.residences.residenceListingsByID.map((val, i, arr) => { i > 3 ? val : null })})
+    // const topThreeListed = useSelector(state => state.residences.residenceListingsByID.map(id => ))
+    const dispatch = useDispatch();
+    console.log(topThreeListed)
 
     // useEffect((props) => {
         // console.log(props.top3Residences)
@@ -31,11 +36,11 @@ const SectionSimilarStories = (props) => {
         // document.title = `You clicked ${count} times`;
     //   });
     
-    // const mapThreeRecentProps = () => {
+    const mapThreeRecentProps = () => {
         // return top3Residences.map((res) => {
             // return <Card key={res.slice(0)} res={res} />
         // });
-    // }
+    }
         
     return (
         <div className={classes.section}>
@@ -48,7 +53,7 @@ const SectionSimilarStories = (props) => {
                         <GridContainer>
                             <GridItem xs={12} sm={4} md={4}>
 
-                                {/* {mapThreeRecentProps} */}
+                                {mapThreeRecentProps}
 
                             </GridItem>
                         </GridContainer>
@@ -59,15 +64,3 @@ const SectionSimilarStories = (props) => {
         </div>
     )
 }
-    
-    const mapStateToProps = (state) => {
-        return { 
-            top3Residences: state.residences.residenceListingsByID
-        }
-    }
-    
-    const mapDispatchToProps = (dispatch) => ({
-        functionName: (param) => dispatch({ type: 'ACTION_NAME', param })
-    })
-    
-    export default connect(mapStateToProps, mapDispatchToProps)(SectionSimilarStories);
