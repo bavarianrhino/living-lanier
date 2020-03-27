@@ -295,7 +295,7 @@ const useStyles = makeStyles(contactsStyle);
                 <div className={classes.contacts2}>
                     <div id='map' style={{ height: '100%', margin: '0', padding: '0' }} className={classes.map}>
 
-                        <RegularMap googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${keys.googleMapsAPIKey}`}
+                        <RegularMap googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${keys.GOOGLE_MAPS_API_KEY}`}
                             loadingElement={<div style={{ height: `100%` }} />}
                             containerElement={ <div style={{ height: `100%`, borderRadius: "6px", overflow: "hidden" }} />}
                             mapElement={<div style={{ height: `100%` }} />}
