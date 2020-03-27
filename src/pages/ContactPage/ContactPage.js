@@ -1,5 +1,6 @@
 /*eslint-disable*/
 import React from "react";
+import { Link } from 'react-router-dom';
 import classNames from "classnames"; // nodejs library that concatenates classes
 
 // @material-ui/core components
@@ -38,7 +39,7 @@ import image from "../../assets/livinglaniersunset.jpg";
 
 const useStyles = makeStyles(signupPageStyle);
 
-export default function ContactPage({ ...rest }) {
+export default function ContactPage(props) {
 
 React.useEffect(() => {
     window.scrollTo(0, 0);
