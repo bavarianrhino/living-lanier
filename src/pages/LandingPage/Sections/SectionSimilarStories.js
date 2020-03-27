@@ -31,11 +31,11 @@ const SectionSimilarStories = (props) => {
         // document.title = `You clicked ${count} times`;
     //   });
     
-    const mapThreeRecentProps = () => {
-        return top3Residences.map((res) => {
-            return <Card key={res.slice(0)} res={res} />
-        });
-    }
+    // const mapThreeRecentProps = () => {
+        // return top3Residences.map((res) => {
+            // return <Card key={res.slice(0)} res={res} />
+        // });
+    // }
         
     return (
         <div className={classes.section}>
@@ -48,7 +48,7 @@ const SectionSimilarStories = (props) => {
                         <GridContainer>
                             <GridItem xs={12} sm={4} md={4}>
 
-                                {mapThreeRecentProps}
+                                {/* {mapThreeRecentProps} */}
 
                             </GridItem>
                         </GridContainer>
