@@ -24,6 +24,7 @@ import landingPageStyle from "../../assets/jss/material-kit-react/views/landingP
 
 // Sections for this page
 import MapContainer from "./Sections/MapContainer.js";
+import MapContainer2 from "./Sections/MapContainer2.js";
 // import dark from "@material-ui/core/styles/createPalette";
 
 const dashboardRoutes = [];
@@ -73,7 +74,7 @@ export default function ListingsPage(props) {
             <div className={classNames(classes.main, classes.mainRaised)}>
                 <div className={classes.container} style={{ paddingLeft: '0px', maxWidth: '100%' }} >
 
-                    <MapContainer />
+                    <MapContainer2 />
                     
                 </div>
             </div>
