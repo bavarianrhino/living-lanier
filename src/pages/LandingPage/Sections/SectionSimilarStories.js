@@ -24,11 +24,11 @@ const useStyles = makeStyles(sectionSimilarStoriesStyle);
 // class SectionSimilarStories extends React.Component {
 export default function SectionSimilarStories(props){
     const classes = useStyles();
-    const topThreeListed = useSelector(state => {state.residences.residenceListingsByID[0]})
+    // const topThreeListed = useSelector(state => {state.residences.residenceListingsByID[0]})
     // const topThreeListed = useSelector(state => {state.residences.residenceListingsByID.map((val, i, arr) => { i > 3 ? val : null })})
     // const topThreeListed = useSelector(state => state.residences.residenceListingsByID.map(id => ))
     const dispatch = useDispatch();
-    console.log(topThreeListed)
+    // console.log(topThreeListed)
 
     // useEffect((props) => {
         // console.log(props.top3Residences)
