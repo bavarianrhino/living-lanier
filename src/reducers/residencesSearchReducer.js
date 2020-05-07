@@ -48,7 +48,11 @@ export default function (
                 nextQuery: action.payload['@odata.nextLink'],
                 residenceCount: action.payload['@odata.count'],
                 topThreeLatest: [listings[0], listings[1], listings[2]],
-                residenceListingsByID: Object.assign({...state.residenceListingsByID}, {listings})
+                residenceListingsByID: [
+                    ...(state.residenceListingsByID || []),
+                    ...listings,
+                  ]
+                // residenceListingsByID: Object.assign({...state.residenceListingsByID}, {listings})
             }
             //     residenceListingsByID: {...state.residenceListingsByID.listings, ...(Object.assign({...state.residenceListingsByID}, {...{...action.payload.value.map((obj, i) => ( Object.assign({}, {
             //         listingId: obj.ListingId,
