@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
-import { GREETING } from '../functions/env_vars'
+// import { GREETING } from '../functions/env_vars'
 
 import './stylesheets/index.css';
 import 'semantic-ui-css/semantic.min.css'
