@@ -8,7 +8,13 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 
 // @material-ui/icons
+import Face from "@material-ui/icons/Face";
+import Chat from "@material-ui/icons/Chat";
+import Build from "@material-ui/icons/Build";
 import Favorite from "@material-ui/icons/Favorite";
+import Satellite from "@material-ui/icons/Satellite";
+import Map from "@material-ui/icons/Map";
+import ViewList from "@material-ui/icons/ViewList";
 
 // core components
 import Header from "../../components/Header/Header.js";
@@ -18,6 +24,10 @@ import GridItem from "../../components/Grid/GridItem.js";
 import Button from "../../components/CustomButtons/Button.js";
 import HeaderLinks from "../../components/Header/HeaderLinks.js";
 import Parallax from "../../components/Parallax/Parallax.js";
+
+
+import CustomTabs from "../../components/CustomTabs/CustomTabs.js";
+import NavPills from "components/NavPills/NavPills.js";
 
 import landingPageStyle from "../../assets/jss/material-kit-react/views/landingPageStyle.js";
 // import logoPic from "../../assets/logo.png";
@@ -72,9 +82,43 @@ export default function ListingsPage(props) {
             </Parallax>
 
             <div className={classNames(classes.main, classes.mainRaised)}>
-                <div className={classes.container} style={{ paddingLeft: '0px', maxWidth: '100%' }} >
+                <div className={classes.container} style={{ paddingLeft: '5px', paddingTop: '10px', maxWidth: '100%' }} >
+                    <NavPills color="danger" tabs={[
+                        {
+                            tabButton: "Map",
+                            tabContent: (
+                                <MapContainer2 />
+                            )
+                        },
+                        {
+                            tabButton: "Map2",
+                            tabContent: (
+                                <MapContainer />
+                            )
+                        },
+                        {
+                            tabButton: "List",
+                            tabContent: (
+                                <MapContainer2 />
+                            )
+                        }
+                    ]} />
 
-                    <MapContainer2 />
+                    {/* <CustomTabs headerColor="primary" 
+                        tabs={[
+                            {
+                                tabName: "Map",
+                                tabIcon: Map, 
+                                tabContent: ( <MapContainer2 /> )
+                            },
+                            {
+                                tabName: "List",
+                                tabIcon: List, 
+                                tabContent: ( <MapContainer2 /> )
+                            }
+                        ]}
+                    /> */}
+                    {/* <MapContainer2 /> */}
                     
                 </div>
             </div>
