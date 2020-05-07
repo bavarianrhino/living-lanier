@@ -25,16 +25,9 @@ ReactDOM.render(
 	document.getElementById('root')
 );
 
-console.log(`ENVIRONMENT ---- ${process.env.NODE_ENV}`) //process.env.REACT_APP_KEY
-console.log(`BRIDGE INTERACTIVE API KEY ---- ${process.env.BRIDGE_INTERACTIVE_API_SERVER_TOKEN}`) //process.env.REACT_APP_KEY
-console.log(`GMAPS API KEY ---- ${process.env.GOOGLE_MAPS_API_KEY}`) //process.env.REACT_APP_KEY
-console.log(`TEST API KEY ---- ${process.env.TEST_API_KEY}`) //process.env.REACT_APP_KEY
-console.log(`GREETING ---- ${process.env.GREETING}`) //process.env.REACT_APP_KEY
-console.log(`REACT APP ---- ${process.env.REACT_APP_API_TEST_KEY}`) //process.env.REACT_APP_KEY
-console.log(`REACT BRIDGE INTERACTIVE API KEY ---- ${process.env.REACT_APP_API_BRIDGE_INTERACTIVE_API_SERVER_TOKEN}`) //process.env.REACT_APP_KEY
-console.log(`REACT GMAPS API KEY ---- ${process.env.REACT_APP_API_GOOGLE_MAPS_API_KEY}`) //process.env.REACT_APP_KEY
-console.log(`REACT GREETING ---- ${process.env.REACT_APP_GREETING}`) //process.env.REACT_APP_KEY
-console.log(`TEST API KEY ---- ${process.env.REACT_APP_TEST_API_KEY}`) //process.env.REACT_APP_KEY
-// console.log(`GREETING ---- ${GREETING}`) //process.env.REACT_APP_KEY
-// console.log(GREETING) //process.env.REACT_APP_KEY
+console.log(`ENVIRONMENT ---- ${process.env.NODE_ENV}`)
+console.log(`REDIRECT ---- ${process.env.REACT_APP_REDIRECT_DOMAIN}`)
+console.log(`MLS DATASET ---- ${process.env.REACT_APP_MLS_DATASET}`)
+// console.log(`BRIDGE INTERACTIVE API KEY FIRST(5) ---- ${process.env.REACT_APP_API_BRIDGE_INTERACTIVE_API_SERVER_TOKEN.slice(0, 5)}`)
+// console.log(`GOOGLE MAPS API KEY FIRST(5) ---- ${process.env.REACT_APP_API_GOOGLE_MAPS_API_KEY.slice(0, 5)}`)
 serviceWorker.unregister();
