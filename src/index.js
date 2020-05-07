@@ -30,6 +30,7 @@ console.log(`BRIDGE INTERACTIVE API KEY ---- ${process.env.BRIDGE_INTERACTIVE_AP
 console.log(`GMAPS API KEY ---- ${process.env.GOOGLE_MAPS_API_KEY}`) //process.env.REACT_APP_KEY
 console.log(`TEST API KEY ---- ${process.env.TEST_API_KEY}`) //process.env.REACT_APP_KEY
 console.log(`GREETING ---- ${process.env.GREETING}`) //process.env.REACT_APP_KEY
-console.log(`GREETING ---- ${GREETING}`) //process.env.REACT_APP_KEY
-console.log(GREETING) //process.env.REACT_APP_KEY
+console.log(`GREETING ---- ${process.env.REACT_APP_API_TEST_KEY}`) //process.env.REACT_APP_KEY
+// console.log(`GREETING ---- ${GREETING}`) //process.env.REACT_APP_KEY
+// console.log(GREETING) //process.env.REACT_APP_KEY
 serviceWorker.unregister();
