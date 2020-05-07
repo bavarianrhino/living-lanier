@@ -25,4 +25,7 @@ ReactDOM.render(
 );
 
 console.log(`ENVIRONMENT ---- ${process.env.NODE_ENV}`) //process.env.REACT_APP_KEY
+console.log(`BRIDGE INTERACTIVE API KEY ---- ${process.env.BRIDGE_INTERACTIVE_API_SERVER_TOKEN}`) //process.env.REACT_APP_KEY
+console.log(`GMAPS API KEY ---- ${process.env.GOOGLE_MAPS_API_KEY}`) //process.env.REACT_APP_KEY
+console.log(`TEST API KEY ---- ${process.env.TEST_API_KEY}`) //process.env.REACT_APP_KEY
 serviceWorker.unregister();
