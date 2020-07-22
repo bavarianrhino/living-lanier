@@ -83,7 +83,7 @@ export default function ListingsPage(props) {
 
             <div className={classNames(classes.main, classes.mainRaised)}>
                 <div className={classes.container} style={{ paddingLeft: '5px', paddingTop: '10px', maxWidth: '100%' }} >
-                    <NavPills color="danger" tabs={[
+                    <NavPills style={{ paddingTop: '5px', borderRadius: '10px', minWidth: '75px' }} color="danger" tabs={[
                         {
                             tabButton: "Map",
                             tabContent: (
